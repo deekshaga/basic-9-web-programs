@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<head>
+<title>p3</title>
+<style>
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+border-radius:14px;
+}
+input.c1{width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+border-radius:14px;
+}
+body{background-color:cyan;}
+
+</style>
+</head>
+<body>
+<form action="" method="get">
+Full name<input type="text" name="username" id="e1" placeholder="fname mname lname"/><br/>
+USN<input type="text" name="usn" id="e2" placeholder="4AI21ISXXX" pattern="[1-4][A-Za-z][A-Za-z][0-9][0-9][A-Za-z][A-Za-z][0-9][0-9][0-9]/>
+Password<input type="password" name="pass" id="e3" class="c1"/><br/>
+Email<input type="email" name="uremail" id="e4" placeholder="abc@xyz.com"/ class="c1"><br/>
+DOB<input type="date"/ class="c1"></br>
+Select Debit card<br/>
+Visa<input type="radio" name="debit" value="Visa"/>
+Master<input type="radio" name="debit" value="Master"/>
+Discover<input type="radio" name="debit" value="Discover"/>
+Rupay<input type="radio" name="debit" value="Rupay"/><br/>
+Gender </br>
+Male<input type="checkbox" name="gender" value="Male"/><br/>
+Female<input type="checkbox" name="gender" value="Female"/><br/>
+
+<select id="cities" size="2">
+<optgroup label="karnataka">
+  <option value="Bengaluru">Bengaluru</option>
+  <option value="Mysuru">Mysuru</option>
+    <option value="Mangaluru">Mangaluru</option>
+     <option value="Hubli Dharwad">Hubli</option>
+</optgroup>
+<optgroup label="Tamil Nadu">
+  <option value="Chennai">Chennai</option>
+  <option value="Coiambatore">Coiambatore</option>
+    <option value="Madurai">Madurai</option>
+     <option value="Trichy">Trichy</option>
+</optgroup>
+
+</select>
+<br/>
+<textarea rows="5" cols="100" />Any Suggestion </textarea>
+<br/>
+<input type="submit" value="save"/>
+<input type="reset" value="Clear"/>
+</form>
+</body>
+

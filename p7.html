@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table,td,th{
+                border:10px solid blue;
+                width:5px;
+                text-align:center;
+                background-color:pink;
+                font-style:italic;
+            }
+            table{margin:auto;}
+            input{text-align:right;
+            font-style:italic;}
+            body{background-color: aqua;}
+        </style>
+        <script type="text/javascript">
+            function calc(clicked_id)
+            {
+                var val1=parseFloat(document.getElementById("value1").value);
+                var val2=parseFloat(document.getElementById("value2").value);
+                if(isNaN(val1)||isNaN(val2))
+                    alert("ENTER VALID NUMBER");
+                else if(clicked_id=="add")
+                     document.getElementById("answer").value=val1+val2;
+                else if(clicked_id=="sub")
+                    document.getElementById("answer").value=val1-val2;
+                else if(clicked_id=="mul")
+                    document.getElementById("answer").value=val1*val2;
+                else if(clicked_id=="div")
+                     document.getElementById("answer").value=val1/val2;
+            }
+            function cls()
+            {
+                document.getElementById("value1").value=" ";
+                document.getElementById("value2").value=" ";
+                document.getElementById("answer").value=" ";
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+        <tr>
+            <th colspan="2">simple calculator</th>
+        </tr>
+        <tr>
+            <td>value1</td>
+            <td><input type="text" id="value1" value="0" /></td>
+        </tr>
+        <tr>
+            <td>value2</td>
+            <td><input type="text" id="value2" value="0" /></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Addition" id ="add" onclick="calc(this.id)"/></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Subtraction" id ="sub" onclick="calc(this.id)"/></td></tr>
+        <tr>
+       <td colspan="2"><input type="submit" value="Multiplication" id ="mul" onclick="calc(this.id)"/></td>
+       </tr>
+       <tr>
+       <td colspan="2"><input type="submit" value="Division" id ="div" onclick="calc(this.id)"/></td>
+       </tr>
+       <tr>
+       <td>Answer:</td>
+       <td colspan="2"> <input type="text" id="answer" value="" disabled/></td>
+       </tr>
+       <tr>
+       <td colspan="2"><input type="button" value="CLEAR ALL" onclick="cls()"/></td>
+       </tr>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p{
+position: absolute;
+top: 50%;
+left: 50%;
+transform:translate(-50%,-50%);
+border :10px double brown;
+background-color:beige;
+}
+body{background-color: aqua;}
+</style>
+</head>
+<body>
+<p id ="demo"></p>
+<script>
+var ids=document.getElementById("demo");
+var v1=setInterval(inTimer,1000);
+var fs=5;
+function inTimer()
+{
+ids.innerHTML='TEXT GROWING';
+ids.setAttribute('style',"font-size:"+fs+"px;color:red");
+fs=fs+5;
+if(fs >= 50)
+{
+clearInterval(v1);
+v2=setInterval(deTimer,1000);
+}
+}
+function deTimer()
+{
+fs-=5;
+ids.innerHTML='TEXT SHRINKING';
+ids.setAttribute('style',"font-size:"+fs+"px;color:blue");
+if(fs===5)
+{
+clearInterval(v2);
+}
+}
+</script>
+</body>
+</html>
